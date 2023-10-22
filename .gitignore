@@ -10,4 +10,6 @@ db.sqlite3
 
 .idea/
 
+.vscode/
+
 settings/local_settings.py
