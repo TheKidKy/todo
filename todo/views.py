@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework.viewsets import GenericViewSet
+from .serializers import TodoSerializer
+from .models import Todo
 
-# Create your views here.
+
+class TodoViewSet(GenericViewSet):
+    queryset = Todo.objects.all().order_by('priority')
+    serializer_class = TodoSerializer
