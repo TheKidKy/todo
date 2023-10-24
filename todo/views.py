@@ -1,8 +1,8 @@
-from rest_framework.viewsets import GenericViewSet
+from rest_framework.viewsets import ModelViewSet
 from .serializers import TodoSerializer
 from .models import Todo
 
 
-class TodoViewSet(GenericViewSet):
+class TodoViewSet(ModelViewSet):
     queryset = Todo.objects.all().order_by('priority')
     serializer_class = TodoSerializer
