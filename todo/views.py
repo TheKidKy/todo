@@ -10,3 +10,6 @@ class TodoViewSet(ModelViewSet):
     def perform_create(self, serializer):
         # sends user id to the serializer
         serializer.save(user=self.request.user)
+
+    def get_serializer_context(self):
+        return {'request': self.request}
