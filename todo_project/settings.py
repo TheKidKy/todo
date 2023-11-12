@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # EXTERNAL MODULES
     'rest_framework',
+    'django_filters',
     # INTERNAL MODULES
     'todo'
 ]
